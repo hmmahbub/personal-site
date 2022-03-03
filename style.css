@@ -1,0 +1,363 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/*navbar design start */
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+.dotted-hr{
+border: dotted 8px #fff;
+border-bottom: none;
+margin: 20px auto;
+width: 90px;
+}
+.navbar{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar h1{
+    color: #fff;
+    margin: 0;
+    padding-top: 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: gray;
+    border-radius: 10px;
+    margin: 7px 0;
+    padding: 10px;
+}
+.nav-menu a:hover{
+    background-color: palevioletred;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/*for mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+/*navbar design end*/
+
+
+/*profile start*/
+
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile .top-weather-icone{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 2s;
+
+}
+.profile .top-weather-icone:hover{
+    transform: rotate(400deg);
+}
+.profile-desc h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+}
+.profile-desc p{
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+.profile .bottom-weather-icone{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 2s;
+}
+.profile .bottom-weather-icone:hover{
+    transform: rotate(400deg);
+}
+.profile{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*profile end*/
+
+/*about me start*/
+
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: #fff;
+    text-align: center;
+    font-family: 'monsterrat', sans-serif;
+}
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.aboutme-image img{
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+.about-me p{
+    text-align: center;
+}
+.about-me a{
+    font-size: 1.2rem;
+}
+
+/*bout me end */
+
+/*professional expeerience start*/
+.professional-experince{
+    padding: 1% 0%;
+}
+.professional-experience .card{
+    background-color: #839e9e;
+    border-radius: 5px;
+    height: 700px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.professional-experience .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+.card-icone{
+    text-align: center;
+}
+.card-icone img{
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+}
+.rounded-img{
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+.card-title h2{
+    background-color: gray;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.skills-container{
+padding-right: 45px;
+}
+.skills-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+.skills-container li::before{
+content: '';
+position: absolute;
+top: calc(100% + 5px);
+width: 100%;
+height: 10px;
+background-color: blueviolet;
+left: 0px;
+border-radius: 1000px;
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    height: 10px;
+    background-color: royalblue;
+    left: 0px;
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    }
+
+    .skills-container li.html::after{
+        animation-name: html;
+    }
+    @keyframes html{
+        to{
+            width: 90%;
+        }
+    }
+    .skills-container li.css::after{
+        animation-name: css;
+    }
+    @keyframes css{
+        to{
+            width: 85%;
+        }
+    }
+    .skills-container li.bts::after{
+        animation-name: bts;
+    }
+    @keyframes bts{
+        to{
+            width: 75%;
+        }
+    }
+    .skills-container li.js::after{
+        animation-name: js;
+    }
+    @keyframes js{
+        to{
+            width: 70%;
+        }
+    }
+    .skills-container li.jquery::after{
+        animation-name: jquery;
+    }
+    @keyframes jquery{
+        to{
+            width: 65%;
+        }
+    }
+    .skills-container li.node::after{
+        animation-name: node;
+    }
+    @keyframes node{
+        to{
+            width: 60%;
+        }
+    }
+    .skills-container li.git::after{
+        animation-name: git;
+    }
+    @keyframes git{
+        to{
+            width: 75%;
+        }
+    }
+    .skills-container li.react::after{
+        animation-name: react;
+    }
+    @keyframes react{
+        to{
+            width: 50%;
+        }
+    }
+
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*professional expeerience start*/
+
+/*achievement start*/
+.achievement-contact{
+    padding: 1% 7%;
+    background-color: limegreen;
+    color: #fff;
+}
+.contact{
+    text-align: center;
+}
+.contact, input, textarea{
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+text-align: center;
+border: none;
+border-radius: 5px;
+resize: none;
+}
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: #052d2f;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.media-button button{
+    height: 50px;
+    width: 50px;
+}
+.contact-links{
+    text-align: center;
+}
+.media-button img{
+    margin: 10px;
+}
+.media-button img:hover{
+    background-color: gray;
+}
+/*achievement end*/
+
+/*footer start*/
+.footer{
+    background-color: blueviolet;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-menu a{
+    display: block;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+.footer-menu a:hover{
+    color: red;
+}
+
+.footer::after{
+    display: table;
+    clear: both;
+    content: '';
+}
+
+/*footer end*/
